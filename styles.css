@@ -4,27 +4,37 @@
 }
 
 body {
-    background-color: blue;
-    background-size: cover;
+    background: rgb(9, 9, 83);
 }
 
-h1 {
+#title {
     position: absolute;
     top: 45vh;
     left: 1vw;
     font-size: 3rem;
     font-weight: bolder;
-    color: red;
+    color: white;
     font-family: 'VT323', monospace;
 }
 
-h2 {
+#score_left {
     position: absolute;
     top: 55vh;
     left: 1vw;
     font-size: 3rem;
     font-weight: bolder;
-    color: red;
+    color: white;
+    font-family: 'VT323', monospace;
+}
+
+#high_score_left {
+    position: absolute;
+    top: 65vh;
+    left: 1vw;
+    font-size: 3rem;
+    font-weight: bolder;
+    color: white;
+    font-family: 'VT323', monospace;
 }
 
 #game {
@@ -37,7 +47,9 @@ h2 {
     top: 20vh;
     left: 35vw;
     overflow: hidden;
-    background-color: green;
+    /* background-color: green; */
+    background-image: url("./assets/8bit_night.jpeg");
+    background-size: cover;
 }
 
 #character {
@@ -102,15 +114,67 @@ h2 {
     position: relative;
     top: 100px;
     margin-top: -20px;
-    background: linear-gradient(to bottom right, rgb(49, 52, 52), rgb(155, 18, 41));
-    color: transparent;
+    background: rgb(170, 170, 170);
+
 }
 
 .hole {
     width: 40px;
     height: 20px;
-    background-color: white;
+    background-color: rgb(241, 243, 156);
     position: relative;
     top: 100px;
     margin-top: -20px
 }
+
+#end_screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 380px;
+    background: rgb(10, 8, 82);
+    border: 3px solid white;
+    position: absolute;
+    left: 35.7vw;
+    top: 43vh;    
+}
+
+#game_over {
+    color: white;
+    font-family: 'VT323', monospace;
+    font-size: 40px;
+}
+
+#high_score_message {
+    color: rgb(255, 255, 147);
+    text-shadow: 1px 1px 5px rgb(255, 255, 147);
+    font-family: 'VT323', monospace;
+    font-size: 40px;
+    animation: flashing 1s alternate infinite;
+}
+
+button {
+    background-color: transparent;
+    color: white;
+    font-family: 'VT323', monospace;
+    font-size: 40px;
+    border: none;
+}
+
+button:hover {
+    color: rgb(255, 255, 147);
+    text-shadow: 1px 1px 5px rgb(255, 255, 147);
+}
+
+@keyframes flashing {
+    from {
+        color: rgb(255, 255, 147);
+        text-shadow: 1px 1px 5px rgb(255, 255, 147);
+    }
+    to {
+        color: rgb(255, 155, 155);
+        text-shadow: 1px 1px 5px rgb(255, 155, 155);
+    }
+  }
